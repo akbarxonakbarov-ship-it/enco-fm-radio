@@ -1,8 +1,11 @@
-import os
-
 from fastapi import FastAPI
 
 app = FastAPI(title="Enco FM Radio")
+
+
+@app.head("/")
+async def root_head():
+    return
 
 
 @app.get("/")
