@@ -8,4 +8,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY app ./app
 COPY .env.example ./.env.example
 
-CMD ["python", "-m", "app.admin_bot.main"]
+CMD ["uvicorn", "app.admin_bot.main:app", "--host", "0.0.0.0", "--port", "10000"]
